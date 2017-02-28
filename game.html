@@ -1,0 +1,90 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Rummy Returns</title>
+
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+
+    <script src="js/utils.js"></script>
+    <script src="js/game.js"></script>
+    <style>
+        .clickable {
+        cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameMsg"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div id="game" class="col-md-8">
+                <svg width="958px" height="450px" viewBox="0 0 958 545" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        
+        <title>Table</title>
+        <defs></defs>
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="Table" stroke="#000000">
+                <path d="M751.582,544.5 C865.087,544.5 957.1,423.152 957.1,272.38 C957.1,121.608 865.087,0.5 751.582,0.5 L206.418,0.5 C92.914,0.5 0.9,121.608 0.9,272.38 C0.9,423.152 92.914,544.5 206.418,544.5 L751.582,544.5 Z" id="Shape" fill="#333333"></path>
+                <path d="M719.313,497.5 C819.38,497.5 900.5,397.343 900.5,272.9 C900.5,148.459 819.38,48.5 719.312,48.5 L238.688,48.5 C138.62,48.5 57.5,148.459 57.5,272.9 C57.5,397.341 138.62,497.5 238.688,497.5 L719.313,497.5 Z" id="Shape" fill="#5DB779"></path>
+            </g>
+        </g>
+        <g id="opponentsCards">
+            <image xlink:href="/~Aditya/Rummy/images/cards/back.png" x="300" y="100"
+      height="75" width="75" /> 
+            <image xlink:href="/~Aditya/Rummy/images/cards/back.png" x="350" y="100"
+      height="75" width="75" /> 
+            <image xlink:href="/~Aditya/Rummy/images/cards/back.png" x="400" y="100"
+      height="75" width="75" /> 
+            <image xlink:href="/~Aditya/Rummy/images/cards/back.png" x="450" y="100"
+      height="75" width="75" /> 
+            <image xlink:href="/~Aditya/Rummy/images/cards/back.png" x="500" y="100"
+      height="75" width="75" /> 
+            <image xlink:href="/~Aditya/Rummy/images/cards/back.png" x="550" y="100"
+      height="75" width="75" /> 
+            <image xlink:href="/~Aditya/Rummy/images/cards/back.png" x="600" y="100"
+      height="75" width="75" /> 
+        </g>
+        <g>
+            <image xlink:href="/~Aditya/Rummy/images/cards/back.png" x="400" y="250"
+      height="75" width="75" onmousedown="drawDeck()" class="clickable" />
+        </g>
+                    <g id="topCard">
+                    </g>
+                    <g id="hand">
+                    </g>
+                    
+    </svg>
+            </div>
+            <div id="chat" class="col-md-4 chat">
+                <div class="row">
+                    <div>
+                        <textarea disabled id="textArea" rows="15" cols="50" id="aboutDescription" style="resize: none;" data-role="none"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="inputText">
+                            <textarea id="messageArea" rows="4" cols="50" id="aboutDescription" style="resize: none;" data-role="none"></textarea>
+                    </div>
+                    </div>
+                    <div class="row">
+                        <button class="btn-primary" onclick="sendMessage()">Send</button>
+                        <button class="btn-primary" onclick="rules()">Game Rules</button>
+                        <button class="btn-primary" onclick="logout()">Forfeit Game</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+<div id="modal"></div>    
+</body>
+</html>
